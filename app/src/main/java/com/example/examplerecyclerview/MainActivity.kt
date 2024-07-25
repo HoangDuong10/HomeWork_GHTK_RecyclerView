@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private var isLoading: Boolean = false
     private var isLastPage: Boolean = false
     private var currentPage = 1
-    private var totalPage = 4
+    private var totalPage = 18
     private lateinit var orderAdapter : OrderAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,15 +58,40 @@ class MainActivity : AppCompatActivity() {
         val list = mutableListOf<User>()
        for(i in 1..4){
             list.add(User("Dương",R.drawable.ic_avata,"0535639561","ĐH chưa cập nhật,để xử lí vui lòng đẩy lại",
-                true,true,"Quận Đống Đa, Hà Nội","Test đơn hàng","124.000 đ"))
+                isStatusUser = true,
+                isStatusProduct = true,
+                address = "Quận Đống Đa, Hà Nội",
+                note = "Test đơn hàng",
+                money = "124.000 đ"
+            ))
             list.add(User("Tùng",R.drawable.ic_avata1,"0435593539","ĐH 546754688",
-                false,true,"Quận Hai Bà Trưng, Hà Nội","Test đơn hàng","34.000 đ"))
+                isStatusUser = false,
+                isStatusProduct = true,
+                address = "Quận Hai Bà Trưng, Hà Nội",
+                note = "Test đơn hàng",
+                money = "34.000 đ"
+            ))
             list.add(User("Xuân Toàn",R.drawable.ic_avata2,"0984234245","ĐH 453455656",
-                true,true,"Quận Thanh Xuân, Hà Nội","Test đơn hàng","68.000 đ"))
+                isStatusUser = true,
+                isStatusProduct = true,
+                address = "Quận Thanh Xuân, Hà Nội",
+                note = "Test đơn hàng",
+                money = "68.000 đ"
+            ))
             list.add(User("Văn Hưng",R.drawable.ic_avata1,"01254655667","ĐH chưa cập nhật,để xử lí vui lòng đẩy lại",
-                true,false,"Huyện Cần Giờ, TP Hồ Chí Minh","Test đơn hàng","70.000 đ"))
+                isStatusUser = true,
+                isStatusProduct = false,
+                address = "Huyện Cần Giờ, TP Hồ Chí Minh",
+                note = "Test đơn hàng",
+                money = "70.000 đ"
+            ))
             list.add(User("Thắng",R.drawable.ic_avata2,"0565433789","ĐH 32433545",
-                false,false,"Quận Đống Đa, Hà Nội","Test đơn hàng","14.000 đ"))
+                isStatusUser = false,
+                isStatusProduct = false,
+                address = "Quận Đống Đa, Hà Nội",
+                note = "Test đơn hàng",
+                money = "14.000 đ"
+            ))
         }
         return list
     }
