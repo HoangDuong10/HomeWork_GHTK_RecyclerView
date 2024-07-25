@@ -1,0 +1,6 @@
+<!-- res/drawable/progress_bar_color.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/progress_bar_backfround" />
+</layer-list>
